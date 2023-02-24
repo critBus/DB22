@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: DuKe TeAm
+License Type: Purchased
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="clases.Pensamiento" table="Pensamiento" lazy="false">
+		<id name="id" column="id" type="integer" unsaved-value="0">
+			<generator class="increment">
+			</generator>
+		</id>
+		<property name="contenido" column="Contenido" type="string" length="255" not-null="false" lazy="false"/>
+		<many-to-one name="tema" cascade="lock" column="Temaid" class="clases.Tema" not-null="true" lazy="no-proxy" access="field">
+		</many-to-one>
+		<property name="palabrasClave" column="PalabrasClave" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="nombre" column="Nombre" type="string" length="255" not-null="false" lazy="false"/>
+		<set name="ORM_pT" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="Pensamientoid" not-null="true"/>
+			<one-to-many class="clases.PT"/>
+		</set>
+	</class>
+</hibernate-mapping>

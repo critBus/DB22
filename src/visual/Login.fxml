@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.icons525.Icons525View?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="Pstack" styleClass="background" stylesheets="@CoarseGrid.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.LoginController">
+   <children>
+      <AnchorPane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="419.0" styleClass="background">
+         <children>
+            <JFXTextField fx:id="TUsuario" labelFloat="true" layoutX="70.0" layoutY="178.0" prefHeight="25.0" prefWidth="274.0" promptText="Usuario" styleClass="JFXtextFielTextoBlanco" />
+            <JFXPasswordField fx:id="TContraseña" labelFloat="true" layoutX="70.0" layoutY="246.0" prefHeight="25.0" prefWidth="232.0" promptText="Contraseña" styleClass="JFXtextFielTextoBlanco" />
+            <JFXButton fx:id="BLogin" disable="true" layoutX="69.0" layoutY="327.0" onAction="#apretoLogin" prefHeight="46.0" prefWidth="274.0" ripplerFill="WHITE" styleClass="botomGrisOscuro" text="Login" textFill="#fcf7f7">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="BCerrar" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="328.0" layoutY="1.0" onAction="#apretoCerrar" prefHeight="46.0" prefWidth="52.0" styleClass="botomTrasparente" text="." textFill="#fffafa">
+               <graphic>
+                  <EmojiOneView fill="WHITE" glyphName="X" size="30.0" styleClass=".icono" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BMinimizar" contentDisplay="GRAPHIC_ONLY" layoutX="269.0" layoutY="5.0" onAction="#apretoMinimizar" prefWidth="61.0" styleClass="botomTrasparente" text="." textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="#fffdfd" glyphName="WINDOW_MINIMIZE" size="30" styleClass=".icono" text="" />
+               </graphic>
+            </JFXButton>
+            <Text fill="WHITE" layoutX="69.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+               <font>
+                  <Font name="Arial Italic" size="43.0" />
+               </font>
+               <stroke>
+                  <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.9952380952380953" startX="1.0" startY="0.48571428571428577">
+                     <stops>
+                        <Stop color="#170f0f" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" color="#a47676" height="55.1" radius="30.384999999999998" width="68.44">
+                     <input>
+                        <DropShadow color="#a13535" height="31.38" offsetX="3.0" offsetY="3.0" radius="14.82" spread="0.29" width="29.9" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+            </Text>
+            <Icons525View fill="#f5f0f0" glyphName="USER" layoutX="39.0" layoutY="37.0" size="30" />
+            <Text fill="#f8f8f8" layoutX="75.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Iniciar Seccion">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="BVibilidadContraseña" contentDisplay="GRAPHIC_ONLY" layoutX="309.0" layoutY="241.0" onMousePressed="#apretoVibilidadContraseña" styleClass="botomTrasparente">
+               <graphic>
+                  <MaterialIconView glyphName="VISIBILITY" size="27.0" />
+               </graphic>
+            </JFXButton>
+            <JFXTextField fx:id="TFC" labelFloat="true" layoutX="69.0" layoutY="246.0" prefHeight="25.0" prefWidth="232.0" promptText="Contraseña" styleClass="JFXtextFielTextoBlanco" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

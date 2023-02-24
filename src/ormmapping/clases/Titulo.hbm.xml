@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: DuKe TeAm
+License Type: Purchased
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="clases.Titulo" table="Titulo" lazy="false">
+		<id name="id" column="id" type="integer" unsaved-value="0">
+			<generator class="increment">
+			</generator>
+		</id>
+		<property name="nombre" column="Nombre" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="fecha" column="Fecha" type="date" not-null="false" lazy="false"/>
+		<set name="ORM_Autor" table="Autor_Titulo" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="Tituloid" not-null="true"/>
+			<many-to-many column="Autorid" class="clases.Autor">
+			</many-to-many>
+		</set>
+		<one-to-one name="libro" class="clases.Libro" cascade="save-update,lock" lazy="no-proxy" access="field"/>
+		<set name="ORM_Disponibilidad" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="Tituloid" not-null="true"/>
+			<one-to-many class="clases.Disponibilidad"/>
+		</set>
+		<one-to-one name="articulo" class="clases.Articulo" cascade="save-update,lock" lazy="no-proxy" access="field"/>
+		<one-to-one name="carta" class="clases.Carta" cascade="save-update,lock" lazy="no-proxy" access="field"/>
+		<set name="ORM_pT" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="Tituloid" not-null="true"/>
+			<one-to-many class="clases.PT"/>
+		</set>
+	</class>
+</hibernate-mapping>

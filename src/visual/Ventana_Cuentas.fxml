@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="Pstack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="778.0" styleClass="background" stylesheets="@CoarseGrid.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.Ventana_CuentasController">
+   <children>
+      <AnchorPane prefHeight="542.0" prefWidth="694.0">
+         <children>
+            <JFXTreeTableView fx:id="TV" layoutX="41.0" layoutY="129.0" prefHeight="394.0" prefWidth="698.0" />
+            <JFXTextField fx:id="TBuscar" layoutX="315.0" layoutY="88.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar" styleClass="JFXtextFielTextoBlanco" />
+            <JFXButton fx:id="BClearBusqueda" contentDisplay="GRAPHIC_ONLY" layoutX="552.0" layoutY="88.0" onMousePressed="#apretoClearBusqueda" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CLOSE" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BBuscar" contentDisplay="GRAPHIC_ONLY" layoutX="582.0" layoutY="88.0" onMousePressed="#apretoBuscar" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+               <graphic>
+                  <FontAwesomeIconView glyphName="SEARCH" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BEditar" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="679.0" layoutY="88.0" onMousePressed="#apretoEditar" styleClass="botomTrasparente">
+               <graphic>
+                  <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" size="16.0" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BEliminar" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="646.0" layoutY="88.0" onMousePressed="#apretoEliminar" styleClass="botomTrasparente">
+               <graphic>
+                  <MaterialDesignIconView glyphName="DELETE_FOREVER" size="17" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BClear" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="614.0" layoutY="88.0" onMousePressed="#apretoClear" styleClass="botomTrasparente" text=".">
+               <graphic>
+                  <MaterialDesignIconView glyphName="FILE" size="16" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BCrear" contentDisplay="GRAPHIC_ONLY" layoutX="711.0" layoutY="88.0" onMousePressed="#apretoAgregar" styleClass="botomTrasparente">
+               <graphic>
+                  <EmojiOneView glyphName="HEAVY_PLUS_SIGN" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXRadioButton fx:id="RBTodas" layoutX="41.0" layoutY="62.0" selected="true" text="Todas">
+               <graphic>
+                  <FontAwesomeIconView glyphName="USER_CIRCLE_ALT" size="18.0" styleClass="icono" />
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="RBProfesores" layoutX="148.0" layoutY="62.0" text="Profesores">
+               <graphic>
+                  <FontAwesomeIconView glyphName="UNIVERSITY" size="18.0" styleClass="icono" />
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="RBEstudiantes" layoutX="279.0" layoutY="62.0" text="Estudiante">
+               <graphic>
+                  <FontAwesomeIconView glyphName="LIST_ALT" size="18.0" styleClass="icono" />
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="RBAdministrador" layoutX="409.0" layoutY="62.0" text="Administrador">
+               <graphic>
+                  <FontAwesomeIconView glyphName="USER_SECRET" size="18.0" styleClass="icono" />
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <FontAwesomeIconView glyphName="USERS" layoutX="34.0" layoutY="33.0" size="27.0" />
+            <JFXButton fx:id="BCerrar" alignment="CENTER" contentDisplay="CENTER" layoutX="688.0" onAction="#apretoCerrar" prefHeight="46.0" prefWidth="52.0" styleClass="botomTrasparente" text="." textFill="#fffafa">
+               <graphic>
+                  <EmojiOneView fill="WHITE" glyphName="X" size="30.0" styleClass=".icono" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BMinimizar" contentDisplay="CENTER" layoutX="619.0" layoutY="4.0" onAction="#apretoMinimizar" prefWidth="61.0" styleClass="botomTrasparente" text="." textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="#fffdfd" glyphName="WINDOW_MINIMIZE" size="30" styleClass=".icono" text="" />
+               </graphic>
+            </JFXButton>
+            <Text fill="#f8f8f8" layoutX="90.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Administracion de Cuentas">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="BHome" contentDisplay="GRAPHIC_ONLY" layoutX="546.0" layoutY="6.0" onMousePressed="#apretoHome" styleClass="botomTrasparente">
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="27.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BClearBD" contentDisplay="GRAPHIC_ONLY" layoutX="463.0" layoutY="5.0" onMousePressed="#apretoClearBD" styleClass="botomTrasparente">
+               <graphic>
+                  <EmojiOneView glyphName="SKULL_CROSSBONES" size="27.0" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BActualizarBD" contentDisplay="GRAPHIC_ONLY" layoutX="420.0" layoutY="6.0" onMousePressed="#apretoActualizarBD" styleClass="botomTrasparente">
+               <graphic>
+                  <FontAwesomeIconView glyphName="REFRESH" size="25.0" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BConfiguracionDeCuenta" contentDisplay="GRAPHIC_ONLY" layoutX="506.0" layoutY="7.0" onMousePressed="#apretoBConfiguracionDeCuenta" styleClass="botomTrasparente">
+               <graphic>
+                  <FontAwesomeIconView glyphName="ADDRESS_CARD_ALT" size="25.0" />
+               </graphic>
+            </JFXButton>
+            <JFXNodesList fx:id="NLAgregar" layoutX="711.0" layoutY="88.0">
+               <children>
+                  <JFXButton fx:id="BCrearNL" contentDisplay="GRAPHIC_ONLY" onMousePressed="#apretoBCrearNL" styleClass="botomTrasparente">
+                     <graphic>
+                        <EmojiOneView glyphName="HEAVY_PLUS_SIGN" styleClass="icono" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BCrearEstudiante" contentDisplay="TEXT_ONLY" layoutX="10.0" layoutY="10.0" onMousePressed="#apretoBCrearEstudiante" styleClass="botomGrisOscuro" text="Estudiante" />
+                  <JFXButton fx:id="BCrearProfesor" contentDisplay="TEXT_ONLY" layoutX="-12.0" layoutY="35.0" onMousePressed="#apretoBCrearProfesor" styleClass="botomGrisOscuro" text="Profesor" />
+                  <JFXButton fx:id="BCrearAdministrador" contentDisplay="TEXT_ONLY" layoutX="-6.0" layoutY="60.0" onMousePressed="#apretoBCrearAdministrador" styleClass="botomGrisOscuro" text="Administrador" />
+               </children></JFXNodesList>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

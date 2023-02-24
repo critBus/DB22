@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="Pstack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="490.0" stylesheets="@CoarseGrid.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.Dialogo_Agregar_ArticuloController">
+   <children>
+      <AnchorPane prefHeight="456.0" prefWidth="600.0" styleClass="backgroundSinReondeo">
+         <children>
+            <JFXTextField fx:id="TTitulo" layoutX="32.0" layoutY="37.0" prefHeight="25.0" prefWidth="413.0" promptText="Titulo del Articulo" styleClass="JFXtextFielTextoBlanco" />
+            <JFXDatePicker fx:id="DP" layoutX="36.0" layoutY="83.0" promptText="Fecha De Publicacion" />
+            <Spinner fx:id="ESpiner" layoutX="359.0" layoutY="83.0" prefHeight="25.0" prefWidth="84.0" styleClass="spinner2" />
+            <Text fill="#f8f3f3" layoutX="277.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text1" text="Volumen:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fill="#f8f3f3" layoutX="27.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Disponibilidad:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <JFXCheckBox fx:id="CX" layoutX="160.0" layoutY="179.0" text="En La Biblioteca" />
+            <JFXListView fx:id="LVInternet" layoutX="27.0" layoutY="214.0" prefHeight="75.0" prefWidth="419.0" />
+            <JFXTextField fx:id="TInternet" layoutX="27.0" layoutY="308.0" prefHeight="25.0" prefWidth="342.0" promptText="Direccion en Internet" styleClass="JFXtextFielTextoBlanco" />
+            <JFXButton fx:id="BAgregarInternet" disable="true" layoutX="386.0" layoutY="308.0" onMousePressed="#apretoAgregarInternet" styleClass="botomGrisOscuro" text="Agregar" />
+            <JFXButton fx:id="BClearInternet" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="379.0" layoutY="185.0" onMousePressed="#apretoClearInternet" styleClass="botomTrasparente" text=".">
+               <graphic>
+                  <MaterialDesignIconView glyphName="FILE" size="16" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BEliminarPalabraInternet" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="412.0" layoutY="185.0" onMousePressed="#apretoEliminarPalabraInternet" styleClass="botomTrasparente">
+               <graphic>
+                  <MaterialDesignIconView glyphName="DELETE_FOREVER" size="17" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <Text fill="#f8f3f3" layoutX="27.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autores:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <JFXListView fx:id="LVAutores" layoutX="27.0" layoutY="382.0" prefHeight="75.0" prefWidth="419.0" />
+            <JFXButton fx:id="BClearAutores" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="378.0" layoutY="351.0" onMousePressed="#apretoClearAutores" styleClass="botomTrasparente" text=".">
+               <graphic>
+                  <MaterialDesignIconView glyphName="FILE" size="16" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BEliminarPalabraAutores" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="411.0" layoutY="351.0" onMousePressed="#apretoEliminarPalabraAutores" styleClass="botomTrasparente">
+               <graphic>
+                  <MaterialDesignIconView glyphName="DELETE_FOREVER" size="17" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXComboBox fx:id="CBAutores" layoutX="27.0" layoutY="472.0" prefHeight="25.0" prefWidth="302.0" promptText="Autores Disponibles" />
+            <JFXButton fx:id="BAgregarAutores" disable="true" layoutX="342.0" layoutY="470.0" onMousePressed="#apretoAgregarAutores" styleClass="botomGrisOscuro" text="Agregar" />
+            <JFXButton fx:id="BCrearAutores" contentDisplay="GRAPHIC_ONLY" layoutX="415.0" layoutY="470.0" onMousePressed="#apretoCrearAutores" styleClass="botomGrisOscuro" text=".">
+               <graphic>
+                  <EmojiOneView glyphName="HEAVY_PLUS_SIGN" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BAtras" contentDisplay="GRAPHIC_ONLY" layoutX="24.0" layoutY="520.0" onMousePressed="#apretoAtras" prefHeight="42.0" prefWidth="194.0" stylesheets="@CoarseGrid.css" text=".">
+               <styleClass>
+                  <String fx:value="backgroundSinReondeo" />
+                  <String fx:value="botomGrisOscuro" />
+               </styleClass>
+               <graphic>
+                  <FontAwesomeIconView glyphName="ANGLE_DOUBLE_LEFT" size="30">
+                     <styleClass>
+                        <String fx:value="glyph-icon" />
+                        <String fx:value="icono" />
+                     </styleClass>
+                  </FontAwesomeIconView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BAceptar" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="266.0" layoutY="520.0" onMousePressed="#apretoAceptar" prefHeight="42.0" prefWidth="187.0" stylesheets="@CoarseGrid.css" text=".">
+               <styleClass>
+                  <String fx:value="backgroundSinReondeo" />
+                  <String fx:value="botomGrisOscuro" />
+               </styleClass>
+               <graphic>
+                  <MaterialDesignIconView glyphName="CHECK_ALL" size="30">
+                     <styleClass>
+                        <String fx:value="glyph-icon" />
+                        <String fx:value="icono" />
+                     </styleClass>
+                  </MaterialDesignIconView>
+               </graphic>
+            </JFXButton>
+            <JFXTextField fx:id="TPublicacion" layoutX="30.0" layoutY="131.0" prefHeight="25.0" prefWidth="413.0" promptText="Publicacion" styleClass="JFXtextFielTextoBlanco" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="Pstack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="834.0" styleClass="background" stylesheets="@CoarseGrid.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.Ventana_PrincipalController">
+   <children>
+      <AnchorPane fx:id="PTodo" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <JFXButton fx:id="BMinimizar" contentDisplay="CENTER" layoutX="694.0" layoutY="10.0" onAction="#apretoMinimizar" prefWidth="61.0" styleClass="botomTrasparente" text="." textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="#fffdfd" glyphName="WINDOW_MINIMIZE" size="30" styleClass=".icono" text="" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BCerrar" alignment="CENTER" contentDisplay="CENTER" layoutX="755.0" layoutY="6.0" onAction="#apretoCerrar" prefHeight="46.0" prefWidth="52.0" styleClass="botomTrasparente" text="." textFill="#fffafa">
+               <graphic>
+                  <EmojiOneView fill="WHITE" glyphName="X" size="30.0" styleClass=".icono" />
+               </graphic>
+            </JFXButton>
+            <JFXTabPane fx:id="Tab" layoutX="74.0" layoutY="93.0" prefHeight="555.0" prefWidth="703.0" style="-fx-background-color: orange;">
+               <tabs>
+                  <Tab fx:id="TABAutores" text="Autores">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="backgroundSinReondeo">
+                           <children>
+                              <JFXTreeTableView fx:id="TVAutores" layoutX="14.0" layoutY="69.0" prefHeight="427.0" prefWidth="665.0" />
+                              <JFXTextField fx:id="TBuscarAutores" layoutX="285.0" layoutY="35.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Palbaras Clave" styleClass="JFXtextFielTextoBlanco" />
+                              <JFXButton fx:id="BClearBusquedaAutores" contentDisplay="GRAPHIC_ONLY" layoutX="515.0" layoutY="35.0" onMousePressed="#apretoClearBusquedaAutores" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="BBuscarAutores" contentDisplay="GRAPHIC_ONLY" layoutX="545.0" layoutY="35.0" onMousePressed="#apretoBuscarAutores" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="BEditarTitulos" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="647.0" layoutY="35.0" onMousePressed="#apretoEditarTitulos" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" size="16.0" styleClass="icono" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="BEliminarTitulos" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="614.0" layoutY="35.0" onMousePressed="#apretoEliminarTitulos" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="DELETE_FOREVER" size="17" styleClass="icono" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="BClearTitulos" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="582.0" layoutY="35.0" onMousePressed="#apretoClearTitulos" styleClass="botomTrasparente" text=".">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="FILE" size="16" styleClass="icono" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Pensamientos">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="backgroundSinReondeo">
+                           <children>
+                              <JFXTreeTableView fx:id="TVPensamientos" layoutX="21.0" layoutY="75.0" prefHeight="427.0" prefWidth="665.0" />
+                              <JFXTextField fx:id="TBuscarPensamientos" layoutX="394.0" layoutY="35.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Palbaras Clave" styleClass="JFXtextFielTextoBlanco" />
+                              <JFXButton fx:id="BClearBusquedaPensamientos" contentDisplay="GRAPHIC_ONLY" layoutX="627.0" layoutY="35.0" onMousePressed="#apretoClearBusquedaPensamientos" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="BBuscarPensamientos" contentDisplay="GRAPHIC_ONLY" layoutX="657.0" layoutY="35.0" onMousePressed="#apretoBuscarPensamientos" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="TAPLibros" text="Libros">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="backgroundSinReondeo">
+                           <children>
+                              <JFXTreeTableView fx:id="TVLibros" layoutX="21.0" layoutY="75.0" prefHeight="427.0" prefWidth="665.0" />
+                              <JFXTextField fx:id="TBuscarLibros" layoutX="394.0" layoutY="35.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Libro" styleClass="JFXtextFielTextoBlanco" />
+                              <JFXButton fx:id="BClearBusquedaLibros" contentDisplay="GRAPHIC_ONLY" layoutX="627.0" layoutY="35.0" onMousePressed="#apretoClearBusquedaLibros" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="BBuscarLibros" contentDisplay="GRAPHIC_ONLY" layoutX="657.0" layoutY="35.0" onMousePressed="#apretoBuscarLibros" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Articulos">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="backgroundSinReondeo">
+					  <children>
+                              <JFXTreeTableView fx:id="TVArticulos" layoutX="21.0" layoutY="75.0" prefHeight="427.0" prefWidth="665.0" />
+                              <JFXTextField fx:id="TBuscarArticulos" layoutX="394.0" layoutY="35.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Articulos" styleClass="JFXtextFielTextoBlanco" />
+                              <JFXButton fx:id="BClearBusquedaArticulos" contentDisplay="GRAPHIC_ONLY" layoutX="627.0" layoutY="35.0" onMousePressed="#apretoClearBusquedaArticulos" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="BBuscarArticulos" contentDisplay="GRAPHIC_ONLY" layoutX="657.0" layoutY="35.0" onMousePressed="#apretoBuscarArticulos" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Cartas">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="backgroundSinReondeo">
+					  <children>
+                              <JFXTreeTableView fx:id="TVCartas" layoutX="21.0" layoutY="75.0" prefHeight="427.0" prefWidth="665.0" />
+                              <JFXTextField fx:id="TBuscarCartas" layoutX="394.0" layoutY="35.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Cartas" styleClass="JFXtextFielTextoBlanco" />
+                              <JFXButton fx:id="BClearBusquedaCartas" contentDisplay="GRAPHIC_ONLY" layoutX="627.0" layoutY="35.0" onMousePressed="#apretoClearBusquedaCartas" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="BBuscarCartas" contentDisplay="GRAPHIC_ONLY" layoutX="657.0" layoutY="35.0" onMousePressed="#apretoBuscarCartas" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Temas">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="backgroundSinReondeo">
+					  <children>
+                              <JFXTreeTableView fx:id="TVTemas" layoutX="240.0" layoutY="75.0" prefHeight="427.0" prefWidth="446.0" />
+                              <JFXTextField fx:id="TBuscarTemas" layoutX="394.0" layoutY="35.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Titulos" styleClass="JFXtextFielTextoBlanco" />
+                              <JFXButton fx:id="BClearBusquedaTemas" contentDisplay="GRAPHIC_ONLY" layoutX="627.0" layoutY="35.0" onMousePressed="#apretoClearBusquedaTemas" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="BBuscarTemas" contentDisplay="GRAPHIC_ONLY" layoutX="657.0" layoutY="35.0" onMousePressed="#apretoBuscarTemas" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXListView fx:id="LVTemas" layoutX="14.0" layoutY="75.0" prefHeight="426.0" prefWidth="200.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs></JFXTabPane>
+            <JFXNodesList fx:id="NLAgreagar" layoutX="42.0" layoutY="38.0">
+               <children>
+                  <JFXButton contentDisplay="CENTER" styleClass="botomGrisOscuro" text=".">
+                     <graphic>
+                        <EmojiOneView glyphName="HEAVY_PLUS_SIGN" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BAgregarTemas" onAction="#apretoAgregarTemas" styleClass="botomGrisOscuro" text="Tema" />
+                  <JFXButton fx:id="BAutor" onAction="#apretoAutor" styleClass="botomGrisOscuro" text="Autor" />
+                  <JFXButton fx:id="BAgregarLibro" onMousePressed="#apretoAgregarLibro" styleClass="botomGrisOscuro" text="Libro" />
+                  <JFXButton fx:id="BAgregarArticulo" onMouseReleased="#apretoAgregarArticulo" styleClass="botomGrisOscuro" text="Articulo" />
+                  <JFXButton fx:id="BAgregarCarta" onMousePressed="#AgregarCarta" styleClass="botomGrisOscuro" text="Carta" />
+                  <JFXButton fx:id="BAgregarPensamiento" onMousePressed="#apretoAgregarPensamiento" styleClass="botomGrisOscuro" text="Pensamiento" />
+               </children>
+            </JFXNodesList>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

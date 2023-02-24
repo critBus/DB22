@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="Pstack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="350.0" stylesheets="@CoarseGrid.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.Dialogo_Agregar_EstudianteController">
+   <children>
+      <AnchorPane fx:id="PAnchor" prefHeight="400.0" prefWidth="357.0" styleClass="backgroundSinReondeo">
+         <children>
+            <JFXTextField fx:id="TNombre" labelFloat="true" layoutX="26.0" layoutY="38.0" prefHeight="25.0" prefWidth="295.0" promptText="Nombre" styleClass="JFXtextFielTextoBlanco" />
+            <JFXTextField fx:id="TCuenta" layoutX="26.0" layoutY="86.0" prefHeight="25.0" prefWidth="295.0" promptText="Nombre de la Cuenta" styleClass="JFXtextFielTextoBlanco" />
+            <JFXPasswordField fx:id="TP" layoutX="26.0" layoutY="139.0" prefHeight="25.0" prefWidth="247.0" promptText="Contraseña" styleClass="JFXtextFielTextoBlanco" />
+            <JFXPasswordField fx:id="TPConfimar" layoutX="26.0" layoutY="191.0" prefHeight="25.0" prefWidth="247.0" promptText="Reafirmar Contraseña" styleClass="JFXtextFielTextoBlanco" />
+			<JFXButton fx:id="BVibilidadContraseña" contentDisplay="GRAPHIC_ONLY" layoutX="278.0" layoutY="134.0" onMousePressed="#apretoVibilidadContraseña" styleClass="botomTrasparente">
+               <graphic>
+                  <MaterialIconView glyphName="VISIBILITY" size="27.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BVibilidadReafirmar" contentDisplay="GRAPHIC_ONLY" layoutX="278.0" layoutY="186.0" onMousePressed="#apretoVibilidadReafirmar" styleClass="botomTrasparente">
+               <graphic>
+                  <MaterialIconView glyphName="VISIBILITY" size="27.0" />
+               </graphic>
+            </JFXButton>
+            <JFXTextField fx:id="TCarrera" layoutX="26.0" layoutY="294.0" prefHeight="25.0" prefWidth="295.0" promptText="Carrera" styleClass="JFXtextFielTextoBlanco" />
+            <JFXButton fx:id="BAtras" contentDisplay="CENTER" layoutX="26.0" layoutY="355.0" onMousePressed="#apretoAtras" prefHeight="42.0" prefWidth="122.0" stylesheets="@CoarseGrid.css" text=".">
+               <styleClass>
+                  <String fx:value="backgroundSinReondeo" />
+                  <String fx:value="botomGrisOscuro" />
+               </styleClass>
+               <graphic>
+                  <FontAwesomeIconView glyphName="ANGLE_DOUBLE_LEFT" size="30">
+                     <styleClass>
+                        <String fx:value="glyph-icon" />
+                        <String fx:value="icono" />
+                     </styleClass>
+                  </FontAwesomeIconView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BAceptar" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="191.0" layoutY="355.0" onMousePressed="#apretoAceptar" prefHeight="42.0" prefWidth="130.0" stylesheets="@CoarseGrid.css" text=".">
+               <styleClass>
+                  <String fx:value="backgroundSinReondeo" />
+                  <String fx:value="botomGrisOscuro" />
+               </styleClass>
+               <graphic>
+                  <MaterialDesignIconView glyphName="CHECK_ALL" size="30">
+                     <styleClass>
+                        <String fx:value="glyph-icon" />
+                        <String fx:value="icono" />
+                     </styleClass>
+                  </MaterialDesignIconView>
+               </graphic>
+            </JFXButton>
+            <Spinner fx:id="ESCurso" layoutX="87.0" layoutY="248.0" prefHeight="25.0" prefWidth="63.0" styleClass="spinner2" />
+            <Text fill="#f8f3f3" layoutX="26.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text1" text="Curso:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Spinner fx:id="ESNumero" layoutX="244.0" layoutY="248.0" prefHeight="25.0" prefWidth="81.0" styleClass="spinner2" />
+            <Text fill="#f8f3f3" layoutX="168.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text1" text="Numero:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+             <JFXTextField fx:id="TFContraseña" layoutX="26.0" layoutY="139.0" prefHeight="25.0" prefWidth="247.0" styleClass="JFXtextFielTextoBlanco" />
+            <JFXTextField fx:id="TFReafirmarContraseña" layoutX="25.0" layoutY="191.0" prefHeight="25.0" prefWidth="247.0" styleClass="JFXtextFielTextoBlanco" />
+			
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

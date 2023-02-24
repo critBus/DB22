@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.icons525.Icons525View?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="Pstack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="834.0" styleClass="background" stylesheets="@CoarseGrid.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.Ventana_PrincipalController">
+   <children>
+      <AnchorPane fx:id="PTodo" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <JFXButton fx:id="BMinimizar" contentDisplay="CENTER" layoutX="694.0" layoutY="10.0" onAction="#apretoMinimizar" prefWidth="61.0" styleClass="botomTrasparente" text="." textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="#fffdfd" glyphName="WINDOW_MINIMIZE" size="30" styleClass=".icono" text="" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BCerrar" alignment="CENTER" contentDisplay="CENTER" layoutX="755.0" layoutY="6.0" onAction="#apretoCerrar" prefHeight="46.0" prefWidth="52.0" styleClass="botomTrasparente" text="." textFill="#fffafa">
+               <graphic>
+                  <EmojiOneView fill="WHITE" glyphName="X" size="30.0" styleClass=".icono" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BClearBD" contentDisplay="GRAPHIC_ONLY" layoutX="514.0" layoutY="14.0" onMousePressed="#apretoClearBD" styleClass="botomTrasparente">
+               <graphic>
+                  <EmojiOneView glyphName="SKULL_CROSSBONES" size="27.0" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BActualizarBD" contentDisplay="GRAPHIC_ONLY" layoutX="476.0" layoutY="15.0" onMousePressed="#apretoActualizarBD" styleClass="botomTrasparente">
+               <graphic>
+                  <FontAwesomeIconView glyphName="REFRESH" size="25.0" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXTabPane fx:id="TabPrincipal" layoutX="37.0" layoutY="83.0" prefHeight="579.0" prefWidth="764.0" side="LEFT">
+               <tabs>
+                  <Tab fx:id="TabEntidades" text="Entidades">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXTabPane fx:id="Tab" prefHeight="579.0" prefWidth="728.0" style="-fx-background-color: orange;">
+                                 <tabs>
+                                    <Tab fx:id="TABAutores" text="Autores">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="backgroundSinReondeo">
+                                             <children>
+                                                <JFXTreeTableView fx:id="TVAutores" layoutX="14.0" layoutY="69.0" prefHeight="427.0" prefWidth="665.0" />
+                                                <JFXTextField fx:id="TBuscarAutores" layoutX="265.0" layoutY="35.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Palbaras Clave" styleClass="JFXtextFielTextoBlanco" />
+                                                <JFXButton fx:id="BClearBusquedaAutores" contentDisplay="GRAPHIC_ONLY" layoutX="487.0" layoutY="35.0" onMousePressed="#apretoClearBusquedaAutores" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BBuscarAutores" contentDisplay="GRAPHIC_ONLY" layoutX="517.0" layoutY="35.0" onMousePressed="#apretoBuscarAutores" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BEditarAutores" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="619.0" layoutY="35.0" onMousePressed="#apretoEditarAutores" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" size="16.0" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BEliminarAutores" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="586.0" layoutY="35.0" onMousePressed="#apretoEliminarAutores" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="DELETE_FOREVER" size="17" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BClearAutores" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="554.0" layoutY="35.0" onMousePressed="#apretoClearAutores" styleClass="botomTrasparente" text=".">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="FILE" size="16" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BCrearAutores" contentDisplay="GRAPHIC_ONLY" layoutX="651.0" layoutY="35.0" onMousePressed="#apretoAgregarAutor" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <EmojiOneView glyphName="HEAVY_PLUS_SIGN" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                       <graphic>
+                                          <MaterialDesignIconView glyphName="LIBRARY" />
+                                       </graphic>
+                                    </Tab>
+                                    <Tab text="Pensamientos">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="backgroundSinReondeo">
+                                             <children>
+                                                <JFXTreeTableView fx:id="TVPensamientos" layoutX="21.0" layoutY="75.0" prefHeight="427.0" prefWidth="665.0" />
+                                                <JFXTextField fx:id="TBuscarPensamientos" layoutX="265.0" layoutY="35.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Palbaras Clave" styleClass="JFXtextFielTextoBlanco" />
+                                                <JFXButton fx:id="BClearBusquedaPensamientos" contentDisplay="GRAPHIC_ONLY" layoutX="487.0" layoutY="35.0" onMousePressed="#apretoClearBusquedaPensamientos" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BBuscarPensamientos" contentDisplay="GRAPHIC_ONLY" layoutX="517.0" layoutY="35.0" onMousePressed="#apretoBuscarPensamientos" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                                                   </graphic>
+                                                </JFXButton>
+                  							  <JFXButton fx:id="BEditarPensamientos" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="619.0" layoutY="35.0" onMousePressed="#apretoEditarPensamientos" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" size="16.0" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BEliminarPensamientos" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="586.0" layoutY="35.0" onMousePressed="#apretoEliminarPensamientos" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="DELETE_FOREVER" size="17" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BClearPensamientos" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="554.0" layoutY="35.0" onMousePressed="#apretoClearPensamientos" styleClass="botomTrasparente" text=".">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="FILE" size="16" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                  							  <JFXButton fx:id="BCrearPensamientos" contentDisplay="GRAPHIC_ONLY" layoutX="651.0" layoutY="35.0" onMousePressed="#apretoAgregarPensamiento" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <EmojiOneView glyphName="HEAVY_PLUS_SIGN" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                       <graphic>
+                                          <EmojiOneView glyphName="THOUGHT_BALLOON" />
+                                       </graphic>
+                                    </Tab>
+                                    <Tab fx:id="TAPLibros" text="Libros">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="backgroundSinReondeo">
+                                             <children>
+                                                <JFXTreeTableView fx:id="TVLibros" layoutX="21.0" layoutY="75.0" prefHeight="427.0" prefWidth="665.0" />
+                                                <JFXTextField fx:id="TBuscarLibros" layoutX="265.0" layoutY="35.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Libro" styleClass="JFXtextFielTextoBlanco" />
+                                                <JFXButton fx:id="BClearBusquedaLibros" contentDisplay="GRAPHIC_ONLY" layoutX="487.0" layoutY="35.0" onMousePressed="#apretoClearBusquedaLibros" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BBuscarLibros" contentDisplay="GRAPHIC_ONLY" layoutX="517.0" layoutY="35.0" onMousePressed="#apretoBuscarLibros" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                                                   </graphic>
+                                                </JFXButton>
+                  							  <JFXButton fx:id="BEditarLibros" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="619.0" layoutY="35.0" onMousePressed="#apretoEditarLibros" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" size="16.0" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BEliminarLibros" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="586.0" layoutY="35.0" onMousePressed="#apretoEliminarLibros" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="DELETE_FOREVER" size="17" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BClearLibros" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="554.0" layoutY="35.0" onMousePressed="#apretoClearLibros" styleClass="botomTrasparente" text=".">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="FILE" size="16" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                  							  <JFXButton fx:id="BCrearLibros" contentDisplay="GRAPHIC_ONLY" layoutX="651.0" layoutY="35.0" onMousePressed="#apretoAgregarLibro" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <EmojiOneView glyphName="HEAVY_PLUS_SIGN" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                       <graphic>
+                                          <MaterialIconView glyphName="MAIL" size="18.0" />
+                                       </graphic>
+                                    </Tab>
+                                    <Tab text="Articulos">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="backgroundSinReondeo">
+                  					  <children>
+                                                <JFXTreeTableView fx:id="TVArticulos" layoutX="21.0" layoutY="75.0" prefHeight="427.0" prefWidth="665.0" />
+                                                <JFXTextField fx:id="TBuscarArticulos" layoutX="265.0" layoutY="35.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Articulos" styleClass="JFXtextFielTextoBlanco" />
+                                                <JFXButton fx:id="BClearBusquedaArticulos" contentDisplay="GRAPHIC_ONLY" layoutX="487.0" layoutY="35.0" onMousePressed="#apretoClearBusquedaArticulos" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BBuscarArticulos" contentDisplay="GRAPHIC_ONLY" layoutX="517.0" layoutY="35.0" onMousePressed="#apretoBuscarArticulos" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                                                   </graphic>
+                                                </JFXButton>
+                  							  <JFXButton fx:id="BEditarArticulos" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="619.0" layoutY="35.0" onMousePressed="#apretoEditarArticulos" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" size="16.0" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BEliminarArticulos" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="586.0" layoutY="35.0" onMousePressed="#apretoEliminarArticulos" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="DELETE_FOREVER" size="17" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BClearArticulos" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="554.0" layoutY="35.0" onMousePressed="#apretoClearArticulos" styleClass="botomTrasparente" text=".">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="FILE" size="16" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                  							  <JFXButton fx:id="BCrearArticulos" contentDisplay="GRAPHIC_ONLY" layoutX="651.0" layoutY="35.0" onMousePressed="#apretoAgregarArticulo" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <EmojiOneView glyphName="HEAVY_PLUS_SIGN" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                       <graphic>
+                                          <FontAwesomeIconView glyphName="NEWSPAPER_ALT" />
+                                       </graphic>
+                                    </Tab>
+                                    <Tab text="Cartas">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="backgroundSinReondeo">
+                  					  <children>
+                                                <JFXTreeTableView fx:id="TVCartas" layoutX="21.0" layoutY="75.0" prefHeight="427.0" prefWidth="665.0" />
+                                                <JFXTextField fx:id="TBuscarCartas" layoutX="265.0" layoutY="35.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Cartas" styleClass="JFXtextFielTextoBlanco" />
+                                                <JFXButton fx:id="BClearBusquedaCartas" contentDisplay="GRAPHIC_ONLY" layoutX="487.0" layoutY="35.0" onMousePressed="#apretoClearBusquedaCartas" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BBuscarCartas" contentDisplay="GRAPHIC_ONLY" layoutX="517.0" layoutY="35.0" onMousePressed="#apretoBuscarCartas" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                                                   </graphic>
+                                                </JFXButton>
+                  							  <JFXButton fx:id="BEditarCartas" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="619.0" layoutY="35.0" onMousePressed="#apretoEditarCartas" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" size="16.0" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BEliminarCartas" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="586.0" layoutY="35.0" onMousePressed="#apretoEliminarCartas" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="DELETE_FOREVER" size="17" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BClearCartas" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="554.0" layoutY="35.0" onMousePressed="#apretoClearCartas" styleClass="botomTrasparente" text=".">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="FILE" size="16" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                  							  <JFXButton fx:id="BCrearCartas" contentDisplay="GRAPHIC_ONLY" layoutX="651.0" layoutY="35.0" onMousePressed="#AgregarCarta" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <EmojiOneView glyphName="HEAVY_PLUS_SIGN" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                       <graphic>
+                                          <EmojiOneView glyphName="ENVELOPE" />
+                                       </graphic>
+                                    </Tab>
+                                    <Tab text="Temas">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="backgroundSinReondeo">
+                  					  <children>
+                                                <JFXTreeTableView fx:id="TVPensamientosSeleccionados" layoutX="240.0" layoutY="75.0" prefHeight="427.0" prefWidth="446.0" />
+                                                <JFXTextField fx:id="TBuscarPensamientosSeleccionados" layoutX="265.0" layoutY="35.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Titulos" styleClass="JFXtextFielTextoBlanco" />
+                                                <JFXButton fx:id="BClearBusquedaPensamientosSeleccionados" contentDisplay="GRAPHIC_ONLY" layoutX="487.0" layoutY="35.0" onMousePressed="#apretoClearBusquedaPensamientosSeleccionados" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BBuscarPensamientosSeleccionados" contentDisplay="GRAPHIC_ONLY" layoutX="517.0" layoutY="35.0" onMousePressed="#apretoBuscarPensamientosSeleccionados" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXListView fx:id="LVTemas" layoutX="14.0" layoutY="74.0" prefHeight="427.0" prefWidth="200.0" />
+                  							  <JFXButton fx:id="BEditarPensamientosSeleccionados" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="619.0" layoutY="35.0" onMousePressed="#apretoEditarPensamientosSeleccionados" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" size="16.0" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BEliminarPensamientosSeleccionados" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="586.0" layoutY="35.0" onMousePressed="#apretoEliminarPensamientosSeleccionados" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="DELETE_FOREVER" size="17" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BClearPensamientosSeleccionados" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="554.0" layoutY="35.0" onMousePressed="#apretoClearPensamientosSeleccionados" styleClass="botomTrasparente" text=".">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="FILE" size="16" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                  							  <JFXButton fx:id="BCrearPensamientosSeleccionados" contentDisplay="GRAPHIC_ONLY" layoutX="651.0" layoutY="35.0" onMousePressed="#apretoAgregarPensamiento" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <EmojiOneView glyphName="HEAVY_PLUS_SIGN" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BEditarTema" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="154.0" layoutY="35.0" onMousePressed="#apretoEditarTema" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" size="16.0" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BEliminarTema" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="121.0" layoutY="35.0" onMousePressed="#apretoEliminarTema" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="DELETE_FOREVER" size="17" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BClearTema" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="89.0" layoutY="35.0" onMousePressed="#apretoClearTema" styleClass="botomTrasparente" text=".">
+                                                   <graphic>
+                                                      <MaterialDesignIconView glyphName="FILE" size="16" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="BCrearTema" contentDisplay="GRAPHIC_ONLY" layoutX="186.0" layoutY="35.0" onMousePressed="#apretoAgregarTemas" styleClass="botomTrasparente">
+                                                   <graphic>
+                                                      <EmojiOneView glyphName="HEAVY_PLUS_SIGN" styleClass="icono" />
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                       <graphic>
+                                          <FontAwesomeIconView glyphName="LIST_ALT" />
+                                       </graphic>
+                                    </Tab>
+                                 </tabs>
+                              </JFXTabPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <graphic>
+                        <EmojiOneView glyphName="CLIPBOARD" />
+                     </graphic>
+                  </Tab>
+                  <Tab fx:id="TabRelaciones" text="Relaciones">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXRadioButton fx:id="RBTemas" layoutX="8.0" layoutY="4.0" selected="true" text="Temas">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="LIST_ALT" size="18.0" styleClass="icono" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="RBPensamientos" layoutX="125.0" layoutY="4.0" text="Pensamientos">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <EmojiOneView glyphName="THOUGHT_BALLOON" size="18.0" />
+                                 </graphic>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="RBLibros" layoutX="281.0" layoutY="4.0" text="Libros">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <EmojiOneView glyphName="BLUE_BOOK" size="18.0" />
+                                 </graphic>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="RBCartas" layoutX="381.0" layoutY="4.0" text="Cartas">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <MaterialIconView glyphName="MAIL" size="18.0" />
+                                 </graphic>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="RBArticulos" layoutX="485.0" layoutY="4.0" text="Articulos">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="NEWSPAPER_ALT" size="18.0" />
+                                 </graphic>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="RBAutores" layoutX="601.0" layoutY="4.0" text="Autores">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="LIBRARY" size="18.0" />
+                                 </graphic>
+                              </JFXRadioButton>
+                              <JFXTreeTableView fx:id="TVRelacionesPrincipal" layoutX="17.0" layoutY="74.0" prefHeight="200.0" prefWidth="693.0" />
+                              <JFXTextField fx:id="TBuscarRelacionesPrincipal" layoutX="415.0" layoutY="30.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Titulos" styleClass="JFXtextFielTextoBlanco" />
+                              <JFXButton fx:id="BClearRelacionesPrincipal" contentDisplay="GRAPHIC_ONLY" layoutX="645.0" layoutY="30.0" onMousePressed="#apretoClearBusquedaRelacionesPrincipal" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="BBuscarRelacionesPrincipal" contentDisplay="GRAPHIC_ONLY" layoutX="673.0" layoutY="30.0" onMousePressed="#apretoBuscarBuscarRelacionesPrincipal" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXRadioButton fx:id="RB1RelacionesSecundarias" layoutX="13.0" layoutY="279.0" selected="true" text="Temas">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="LIST_ALT" size="18.0" styleClass="icono" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="RB2RelacionesSecundarias" layoutX="152.0" layoutY="279.0" text="Pensamientos">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="LIST_ALT" size="18.0" styleClass="icono" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="RB3RelacionesSecundarias" layoutX="307.0" layoutY="279.0" text="Libros">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="LIST_ALT" size="18.0" styleClass="icono" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="RB4RelacionesSecundarias" layoutX="439.0" layoutY="279.0" text="Cartas">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="LIST_ALT" size="18.0" styleClass="icono" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="RB5RelacionesSecundarias" layoutX="571.0" layoutY="279.0" text="Articulos">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="LIST_ALT" size="18.0" styleClass="icono" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXTreeTableView fx:id="TVRelacionesSecundarias" layoutX="22.0" layoutY="349.0" prefHeight="216.0" prefWidth="693.0" />
+                              <JFXTextField fx:id="TBuscarRelacionesSecundarias" layoutX="420.0" layoutY="305.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Titulos" styleClass="JFXtextFielTextoBlanco" />
+                              <JFXButton fx:id="BClearBusquedaRelacionesSecundarias" contentDisplay="GRAPHIC_ONLY" layoutX="650.0" layoutY="305.0" onMousePressed="#apretoClearBusquedaRelacionesSecundarias" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="BBuscarRelacionesSecundarias" contentDisplay="GRAPHIC_ONLY" layoutX="678.0" layoutY="305.0" onMousePressed="#apretoBuscarRelacionesSecundarias" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                                 </graphic>
+                              </JFXButton>
+                           </children></AnchorPane>
+                    </content>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SITEMAP" />
+                     </graphic>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+            <JFXNodesList fx:id="NLAgreagar" layoutX="42.0" layoutY="38.0">
+               <children>
+                  <JFXButton contentDisplay="CENTER" styleClass="botomGrisOscuro" text=".">
+                     <graphic>
+                        <EmojiOneView glyphName="HEAVY_PLUS_SIGN" styleClass="icono" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BAgregarTemas" onMousePressed="#apretoAgregarTemas" styleClass="botomGrisOscuro" text="Tema" />
+                  <JFXButton fx:id="BAutor" onMousePressed="#apretoAgregarAutor" styleClass="botomGrisOscuro" text="Autor" />
+                  <JFXButton fx:id="BAgregarLibro" onMousePressed="#apretoAgregarLibro" styleClass="botomGrisOscuro" text="Libro" />
+                  <JFXButton fx:id="BAgregarArticulo" onMouseReleased="#apretoAgregarArticulo" styleClass="botomGrisOscuro" text="Articulo" />
+                  <JFXButton fx:id="BAgregarCarta" onMousePressed="#AgregarCarta" styleClass="botomGrisOscuro" text="Carta" />
+                  <JFXButton fx:id="BAgregarPensamiento" onMousePressed="#apretoAgregarPensamiento" styleClass="botomGrisOscuro" text="Pensamiento" />
+               </children>
+            </JFXNodesList>
+            <JFXNodesList fx:id="NLReportes" layoutX="112.0" layoutY="38.0">
+               <children>
+                  <JFXButton contentDisplay="CENTER" styleClass="botomGrisOscuro" text="Reportes" />
+                  <JFXButton fx:id="BReporteTemas" onMousePressed="#apretoReporteTemas" styleClass="botomGrisOscuro" text="Temas" />
+                  <JFXButton fx:id="BReporteAutor" onMousePressed="#apretoReporteAutor" styleClass="botomGrisOscuro" text="Autors" />
+                  <JFXButton fx:id="BReporteLibro" onMousePressed="#apretoReporteLibro" styleClass="botomGrisOscuro" text="Libros" />
+                  <JFXButton fx:id="BReporteArticulo" onMouseReleased="#apretoReporteArticulo" styleClass="botomGrisOscuro" text="Articulos" />
+                  <JFXButton fx:id="BReporteCarta" onMousePressed="#apretoReporteCarta" styleClass="botomGrisOscuro" text="Carta" />
+                  <JFXButton fx:id="BReportePensamiento" onMousePressed="#apretoReportePensamiento" styleClass="botomGrisOscuro" text="Pensamientos" />
+               </children>
+            </JFXNodesList>
+            <Icons525View fill="#f5f0f0" glyphName="USER" layoutX="46.0" layoutY="33.0" size="25" />
+            <Text fx:id="TENombre" fill="#f8f8f8" layoutX="81.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rodolfo Sanchez Garcia">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="BCuentas" contentDisplay="GRAPHIC_ONLY" layoutX="603.0" layoutY="12.0" onMousePressed="#apretoCuentas" styleClass="botomTrasparente" text="Button">
+               <graphic>
+                  <MaterialDesignIconView glyphName="ACCOUNT_SETTINGS_VARIANT" size="27.0" text="" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BConfiguracionDeCuenta" contentDisplay="GRAPHIC_ONLY" layoutX="558.0" layoutY="16.0" onMousePressed="#apretoBConfiguracionDeCuenta" styleClass="botomTrasparente">
+               <graphic>
+                  <FontAwesomeIconView glyphName="ADDRESS_CARD_ALT" size="25.0" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: DuKe TeAm
+License Type: Purchased
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="clases.Libro" table="Libro" lazy="false">
+		<id name="tituloId" column="Tituloid" type="integer">
+			<generator class="foreign">
+				<param name="property">titulo</param>
+			</generator>
+		</id>
+		<one-to-one name="titulo" class="clases.Titulo" cascade="all" constrained="true"/>
+		<property name="edicion" column="Edicion" type="integer" length="10" not-null="false" lazy="false"/>
+	</class>
+</hibernate-mapping>

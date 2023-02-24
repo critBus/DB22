@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: DuKe TeAm
+License Type: Purchased
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="clases.Estudiante" table="Estudiante" lazy="false">
+		<id name="usuarioId" column="Usuarioid" type="integer">
+			<generator class="foreign">
+				<param name="property">usuario</param>
+			</generator>
+		</id>
+		<one-to-one name="usuario" class="clases.Usuario" cascade="all" constrained="true"/>
+		<property name="curso" column="Curso" type="integer" length="10" not-null="false" lazy="false"/>
+		<property name="carrera" column="Carrera" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="identificador" column="Identificador" type="integer" length="10" not-null="false" lazy="false"/>
+	</class>
+</hibernate-mapping>

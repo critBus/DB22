@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="Pstack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="543.0" stylesheets="@CoarseGrid.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.Dialogo_Agregar_PensamientoController">
+   <children>
+      <AnchorPane prefHeight="587.0" prefWidth="572.0" styleClass="backgroundSinReondeo">
+         <children>
+            <JFXTextField fx:id="TNombre" labelFloat="true" layoutX="22.0" layoutY="29.0" prefHeight="25.0" prefWidth="486.0" promptText="Nombre" styleClass="JFXtextFielTextoBlanco" />
+            <TextArea fx:id="TA" layoutX="22.0" layoutY="113.0" prefHeight="98.0" prefWidth="486.0" promptText="Escribe el contenido del Pensamiento" />
+            <Text fill="#f8f3f3" layoutX="22.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contenido:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <JFXComboBox fx:id="CB" labelFloat="true" layoutX="86.0" layoutY="228.0" prefHeight="25.0" prefWidth="385.0" promptText="Selecciona el Tema" />
+            <Text fill="#f8f3f3" layoutX="24.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tema:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fill="#f8f3f3" layoutX="24.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titulos: relacionados " />
+            <JFXTextField fx:id="TBuscar" layoutX="144.0" layoutY="271.0" prefHeight="25.0" prefWidth="199.0" promptText="Buscar Titulo" styleClass="JFXtextFielTextoBlanco" />
+            <JFXButton fx:id="BClearBusqueda" contentDisplay="GRAPHIC_ONLY" layoutX="352.0" layoutY="271.0" onMousePressed="#apretoClearBusqueda" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CLOSE" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BBuscar" contentDisplay="GRAPHIC_ONLY" layoutX="382.0" layoutY="271.0" onMousePressed="#apretoBuscar" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente">
+               <graphic>
+                  <FontAwesomeIconView glyphName="SEARCH" size="17" />
+               </graphic>
+               <contextMenu>
+                  <ContextMenu fx:id="CM">
+                     <items>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <JFXRadioButton fx:id="RBCMPorNombre" selected="true" text="Nombre" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <JFXRadioButton fx:id="RBCMPorFecha" text="Fecha" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <JFXRadioButton fx:id="RBCMPorAutor" text="Autor" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <JFXRadioButton fx:id="RBCMPorDisponibilidad" text="Disponibilidad" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <JFXRadioButton fx:id="RBCMPorUbicacion" text="Ubicacion" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <JFXRadioButton fx:id="RBCMPorTipo" text="Tipo" />
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </JFXButton>
+            <JFXButton fx:id="BAtras" contentDisplay="GRAPHIC_ONLY" layoutX="27.0" layoutY="557.0" onMousePressed="#apretoAtras" prefHeight="42.0" prefWidth="194.0" stylesheets="@CoarseGrid.css" text=".">
+               <styleClass>
+                  <String fx:value="backgroundSinReondeo" />
+                  <String fx:value="botomGrisOscuro" />
+               </styleClass>
+               <graphic>
+                  <FontAwesomeIconView glyphName="ANGLE_DOUBLE_LEFT" size="30">
+                     <styleClass>
+                        <String fx:value="glyph-icon" />
+                        <String fx:value="icono" />
+                     </styleClass>
+                  </FontAwesomeIconView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BAceptar" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="323.0" layoutY="557.0" onMousePressed="#apretoAceptar" prefHeight="42.0" prefWidth="187.0" stylesheets="@CoarseGrid.css" text=".">
+               <styleClass>
+                  <String fx:value="backgroundSinReondeo" />
+                  <String fx:value="botomGrisOscuro" />
+               </styleClass>
+               <graphic>
+                  <MaterialDesignIconView glyphName="CHECK_ALL" size="30">
+                     <styleClass>
+                        <String fx:value="glyph-icon" />
+                        <String fx:value="icono" />
+                     </styleClass>
+                  </MaterialDesignIconView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BCrearTemas" contentDisplay="GRAPHIC_ONLY" layoutX="481.0" layoutY="233.0" onMousePressed="#apretoCrearTemas" styleClass="botomGrisOscuro" text=".">
+               <graphic>
+                  <EmojiOneView glyphName="HEAVY_PLUS_SIGN" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXTreeTableView fx:id="TV2" layoutX="25.0" layoutY="315.0" prefHeight="131.0" prefWidth="486.0" showRoot="false" tableMenuButtonVisible="true" />
+            <JFXComboBox fx:id="CBTitulos" labelFloat="true" layoutX="24.0" layoutY="502.0" prefHeight="25.0" prefWidth="357.0" promptText="Titulos Disponibles" />
+            <JFXButton fx:id="BAgregarTitulos" disable="true" layoutX="403.0" layoutY="500.0" onMousePressed="#apretoAgregarTitulos" styleClass="botomGrisOscuro" text="Agregar" />
+            <JFXTextField fx:id="TLugar" labelFloat="true" layoutX="117.0" layoutY="462.0" prefHeight="25.0" prefWidth="385.0" promptText="Lugar dentro del titulo donde se encuentra" styleClass="JFXtextFielTextoBlanco" />
+            <Text fill="#f8f3f3" layoutX="22.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ubicacion:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="BEliminarTitulos" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="450.0" layoutY="271.0" onMousePressed="#apretoEliminarTitulos" styleClass="botomTrasparente">
+               <graphic>
+                  <MaterialDesignIconView glyphName="DELETE_FOREVER" size="17" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="BClearTitulos" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="419.0" layoutY="271.0" onMousePressed="#apretoClearTitulos" styleClass="botomTrasparente" text=".">
+               <graphic>
+                  <MaterialDesignIconView glyphName="FILE" size="16" styleClass="icono" />
+               </graphic>
+            </JFXButton>
+            <JFXNodesList fx:id="NLCrearTitulo" layoutX="483.0" layoutY="503.0">
+               <children>
+                  <JFXButton fx:id="BCrearTitulos" contentDisplay="GRAPHIC_ONLY" onMousePressed="#apretoCrearTitulos" styleClass="botomGrisOscuro" text=".">
+                     <graphic>
+                        <EmojiOneView glyphName="HEAVY_PLUS_SIGN" styleClass="icono" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BCrearCarta" onMousePressed="#apretoCrearCarta" styleClass="botomGrisOscuro" text="Carta" />
+                  <JFXButton fx:id="BCrearArticulo" onMousePressed="#apretoCrearArticulo" styleClass="botomGrisOscuro" text="Articulo" />
+                  <JFXButton fx:id="BCrearLibro" onMousePressed="#apretoCrearLibro" styleClass="botomGrisOscuro" text="Libro" />
+               </children>
+            </JFXNodesList>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

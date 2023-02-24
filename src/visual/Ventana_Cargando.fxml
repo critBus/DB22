@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="PAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.Ventana_CargandoController">
+   <children>
+      <Text fx:id="Te" fill="WHITE" layoutX="93.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargando">
+         <font>
+            <Font name="Arial Italic" size="43.0" />
+         </font>
+         <stroke>
+            <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.9952380952380953" startX="1.0" startY="0.48571428571428577">
+               <stops>
+                  <Stop color="#170f0f" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+         <effect>
+            <InnerShadow blurType="GAUSSIAN" color="#a47676" height="55.1" radius="30.384999999999998" width="68.44">
+               <input>
+                  <DropShadow color="#a13535" height="31.38" offsetX="3.0" offsetY="3.0" radius="14.82" spread="0.29" width="29.9" />
+               </input>
+            </InnerShadow>
+         </effect>
+      </Text>
+      <JFXDrawer />
+      <ProgressIndicator fx:id="Pro" layoutX="340.0" layoutY="116.0" prefHeight="107.0" prefWidth="74.0" progress="0.0" />
+      
+   </children>
+</AnchorPane>

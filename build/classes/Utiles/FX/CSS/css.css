@@ -1,0 +1,188 @@
+/*
+#343d46
+oscuro claro
+*/
+.background {
+   /* -fx-background-image: url("CoarseGrid.png");
+    -fx-background-repeat: repeat;*/
+    -fx-background-color:
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+        -fx-background-radius: 40;
+        -fx-border-radius: 40;
+}
+.backgroundSinReondeo {
+   /* -fx-background-image: url("CoarseGrid.png");
+    -fx-background-repeat: repeat;*/
+    -fx-background-color:
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+        -fx-border-width: 5;
+        -fx-border-color: white;
+}
+/*
+oscuro con gradiente blanca
+*/
+.my-gridpane {
+
+    -fx-background-color: radial-gradient(radius 100%, derive(-fx-base,50%), derive(-fx-base,-20%));
+}
+
+/*
+estilo oscuro tabla
+*/
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0%, #424141 100%);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    
+    /*-fx-text-fill: #c54e2c;*/
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #616161;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #424242;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+}
+
+.table-row-cell:selected {
+    /*-fx-background-color: #000005797;*/
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    /*-fx-opacity: 0;*/
+
+    -fx-background-color: #f0f0f0;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+
+    -fx-padding: 0.25em; /* 3 */
+}
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button:pressed, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button:pressed {
+    /*-fx-opacity: 0;*/
+
+    -fx-background-color: #a30000;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+
+    -fx-padding: 0.25em; /* 3 */
+}
+/*
+termina estilo oscuro tabla
+*/
+
+.JFXtextFielTextoBlanco{
+
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+    -jfx-focus-color: orange;
+    -jfx-unfocus-color: white;
+}
+.JFXtextFielTextoBlanco:focused{
+
+    -fx-text-fill: orange;
+    -fx-prompt-text-fill: orange;
+    -jfx-focus-color: orange;
+    -jfx-unfocus-color: white;
+}
+.JFXtextFielTextoBlanco:hover{
+
+    -fx-text-fill: red;
+    -fx-prompt-text-fill: red;
+    -jfx-unfocus-color: red;
+    
+}
+/*
+-fx-background-color #343d46
+*/
+.botomGrisOscuro{
+-fx-background-color: #343d46;
+-fx-text-fill: white;
+-fx-border-radius: 30;
+-fx-background-radius: 30;
+-fx-border-width: 2;
+-fx-border-color: white;
+}
+.botomGrisOscuro:hover{
+-fx-text-fill: orange;
+-fx-border-color: orange;
+}
+
+.glyph-icon{
+
+-fx-fill: white;    
+}
+.icono{
+-fx-fill: white; 
+
+}
+.botomGrisOscuro:hover .icono{
+
+ -fx-fill: orange;   
+}
+/*.glyph-icon:hover{
+
+-fx-fill: orange;    
+}*/
+.botomTrasparente:hover .glyph-icon{
+
+ -fx-fill: orange;   
+}
+
+.botomTrasparente:hover{
+
+    -fx-border-width: 2;
+-fx-border-color: orange;
+}
+
+.jfx-list-cell:hover{
+-fx-background-color: orange;
+
+}
+.jfx-list-cell:odd{
+-fx-background-color: #515D6D;
+-fx-text-fill: white;
+}
+.jfx-list-cell:selected{
+    -fx-background-color: cyan;
+}

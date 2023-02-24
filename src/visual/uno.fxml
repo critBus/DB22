@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="600.0" styleClass="background" stylesheets="@CoarseGrid.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.unoController">
+   <children>
+      <TableView fx:id="tabla" layoutX="69.0" layoutY="109.0" prefHeight="220.0" prefWidth="435.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Algo" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <JFXTextField fx:id="tex" layoutX="66.0" layoutY="375.0" onKeyTyped="#escribe" prefHeight="25.0" prefWidth="302.0" />
+      <JFXPasswordField fx:id="PF" layoutX="66.0" layoutY="55.0" prefHeight="25.0" prefWidth="302.0" />
+      <JFXButton fx:id="BU" focusTraversable="false" layoutX="398.0" layoutY="62.0" style="-fx-font-weight: boid;">
+         <ripplerFill>
+            <RadialGradient centerX="0.48333333333333334" centerY="0.4714285714285714" focusAngle="86.31" focusDistance="0.2325581395348837" radius="0.9534883720930233">
+               <stops>
+                  <Stop color="#2d3032" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill></JFXButton>
+      <MenuBar layoutX="66.0" layoutY="30.0" prefHeight="25.0" prefWidth="204.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <CheckMenuItem mnemonicParsing="false" text="Algo" />
+                  <MenuItem mnemonicParsing="false" text="Algo" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="dos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <JFXRadioButton />
+                     </graphic></MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <JFXRadioButton />
+                     </graphic></MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <JFXRadioButton />
+                     </graphic></MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+                  <MenuItem mnemonicParsing="false" text="About" />
+                  <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
